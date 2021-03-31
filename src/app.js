@@ -28,7 +28,7 @@ const swaggerDocument = YAML.load(path.join(__dirname, '../doc/api.yaml'));
 
 const bodyParser = require('body-parser');
 
-app.use(bodyParser({limit: '2mb'}));
+app.use(bodyParser({limit: '5mb'}));
 
 app.use(helmet());
 app.use(cors());
