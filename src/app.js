@@ -26,6 +26,7 @@ const { userIdValidator } = require('./utils/validation/validator');
 const app = express();
 const swaggerDocument = YAML.load(path.join(__dirname, '../doc/api.yaml'));
 
+app.use(express.bodyParser({limit: '2mb'}));
 app.use(helmet());
 app.use(cors());
 app.use(express.json());
